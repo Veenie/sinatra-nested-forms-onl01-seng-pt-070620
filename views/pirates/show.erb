@@ -5,7 +5,6 @@ require 'pry'
 <%= @pirate.weight %>
 <%= @pirate.height %>
 
-<% binding.pry %>
 
 <h2>Display your first ship here</h2>
 <%= @ships.first %>
@@ -25,10 +24,10 @@ require 'pry'
 <h2>Display your second ship here</h2>
 
 
-<% @ships.each do |ship| %>
+ <% @ships.each do |ship| %>
+<% binding.pry %>
+    ship.name
+    ship.type
+    ship.booty
 
-    <p>Name: <%= ship.name %></p><br>
-    <p>Type: <%= ship.type %></p><br>
-    <p>Booty: <%= ship.booty %></p>
-
-<% end %>
+ end
